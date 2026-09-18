@@ -1,39 +1,79 @@
 /* ===== MAIN SECTION - feature/main-section (Issue #3) ===== */
 .grid-section {
-    padding: 40px 20px;
-}
-
-.grid-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.grid-section .h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
 }
 
-.card img {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px 20px;
+}
+
+.cat-miniature {
+    text-align: left;
+}
+
+.thumbnail-container {
+    position: relative;
+}
+
+.thumbnail-container .visuel {
     width: 100%;
     display: block;
 }
 
-.card h3, .card p, .card .price {
-    padding: 0 15px;
+.image-zoom {
+    position: relative;
 }
 
-.card .price {
+.zoom {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.thumbnail-container p {
+    margin: 8px 0 0;
+    font-size: 0.95rem;
+}
+
+.thumbnail-container em {
     display: block;
+    font-style: italic;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.share {
+    font-size: 0.8rem;
+    color: #1c5b73;
+    cursor: pointer;
+}
+
+.cta-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px 0 0 auto;
+    background: #1c5b73;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
     font-weight: bold;
-    padding-bottom: 15px;
+    border-radius: 3px;
 }
