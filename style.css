@@ -1,6 +1,6 @@
 footer{
     background-color: white;
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.06);
     width: 100%;
 }
 
@@ -19,6 +19,8 @@ footer{
     width: 100%;
     text-align: center;
     color: grey;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -55,6 +57,7 @@ footer{
 
 .nav-links a:hover {
   color: #17a2de;
+}
 /* ===== MAIN SECTION - feature/main-section (Issue #3) ===== */
 .grid-section {
     padding: 20px;
