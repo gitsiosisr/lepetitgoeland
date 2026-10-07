@@ -1,0 +1,38 @@
+
+name: Déploiement sur GitHub Pages
+ 
+# Le script se déclenche uniquement lors d'un push/merge sur main
+on:
+  push:
+    branches:
+      - main
+ 
+# Autorisations nécessaires pour publier sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+ 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+ 
+      - name: Configuration de GitHub Pages
+        uses: actions/configure-pages@v4
+ 
+      - name: Upload des fichiers
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Déploie tous les fichiers situés à la racine du projet
+ 
+      - name: Déploiement en ligne
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+        
